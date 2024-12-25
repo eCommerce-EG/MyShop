@@ -1,8 +1,6 @@
-    <!-- Media Query Width -->
+/* Media Query Width */
+
     <style>
-      background-color: yellow;
-
-
       @media only screen and (max-width: 600px) {
       body {
       background-color: yellow;
