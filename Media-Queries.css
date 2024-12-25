@@ -1,0 +1,28 @@
+    <style>
+      @media only screen and (max-width: 600px) {
+      body {
+      background-color: yellow;
+      }
+      }
+
+      /* Styles for larger phones in portrait/landscape */
+      @media (min-width: 600px) and (max-width: 768px) {
+
+      }
+
+      /* Styles for tablets */
+      @media (min-width: 768px) and (max-width: 1024px) {
+
+      }
+
+      /* Styles for medium screens */
+      @media (min-width: 1024px) and (max-width: 1440px) {
+
+      }
+
+      /* Styles for large monitors */ 
+      @media (min-width: 1440px) {
+
+      }
+
+    </style>
