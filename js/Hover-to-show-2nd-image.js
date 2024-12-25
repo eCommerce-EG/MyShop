@@ -1,35 +1,31 @@
-  document.addEventListener(&quot;DOMContentLoaded&quot;, function () {
-    var posts = document.querySelectorAll(&quot;.post&quot;);
+document.addEventListener("DOMContentLoaded", function () {
+    var posts = document.querySelectorAll(".post");
 
     posts.forEach(function (post) {
-      var postBody = post.querySelector(&quot;.post-body&quot;);
-      var images = postBody.querySelectorAll(&quot;img&quot;);
+        var postBody = post.querySelector(".post-body");
+        var images = postBody.querySelectorAll("img");
 
-      if (images.length &gt; 1) {
-        // Get the second image URL
-        var secondImageUrl = images[1].src;
+        if (images.length > 1) {
+            // Get the second image URL
+            var secondImageUrl = images[1].src;
 
-        // Get the second image placeholder
-        var secondImageElement = post.querySelector(&quot;.second-image&quot;);
+            // Get the second image placeholder
+            var secondImageElement = post.querySelector(".second-image");
 
-        if (secondImageElement) {
-          secondImageElement.src = secondImageUrl; // Set the second images src
+            if (secondImageElement) {
+                secondImageElement.src = secondImageUrl; // Set the second image's src
+            }
+
+            // Add hover effects to show the second image
+            post.addEventListener("mouseenter", function () {
+                secondImageElement.style.opacity = "1"; // Display the second image
+                secondImageElement.style.transform = "scale(1.5)";
+            });
+
+            post.addEventListener("mouseleave", function () {
+                secondImageElement.style.opacity = "0"; // Hide the second image
+                secondImageElement.style.transform = "scale(1)"; // Reset transform
+            });
         }
-
-        // Add hover effects to show the second image
-        post.addEventListener(&quot;mouseenter&quot;, function () {
-  secondImageElement.style.opacity = &quot;1&quot;; // Display the second image
-    secondImageElement.style.transform = &quot;scale(1.5)&quot;; 
-
-
-        });
-
-        post.addEventListener(&quot;mouseleave&quot;, function () {
-            secondImageElement.style.opacity = &quot;0&quot;; // Hide the second image
-      secondImageElement.style.transform = &quot;scale(1)&quot;; // Display the second image
-
-
-        });
-      }
     });
-  });
+});
